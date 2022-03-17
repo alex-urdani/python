@@ -1,0 +1,23 @@
+body{
+    background-color: #707070;
+}
+.container{
+    width: 95%;
+    max-width: 980px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+}
+
+embed{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}

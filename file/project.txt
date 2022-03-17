@@ -1,0 +1,107 @@
+list_of_voters = []
+list_of_democrat = []
+list_of_republican = []
+list_of_democrat_senate = []
+list_of_republican_senate = []
+list_of_democrat_house = []
+list_of_republican_house = []
+list_of_democrat_governor = []
+list_of_republican_governor = []
+list_of_green = []
+while True:
+    name = input("Enter your name: ")
+    age = int(input("Enter your age: "))
+    citizenship = input("Are you a citizen? ")
+    if age >= 18 and citizenship == "yes":
+        ID = input("Enter your ID number: ")
+        if ID in list_of_voters:
+            print("======================")
+            print("You Have Already Voted")
+            print("======================")
+            continue
+        else:
+            list_of_voters.append(name)
+            list_of_voters.append(age)
+            list_of_voters.append(citizenship)
+            list_of_voters.append(ID)
+        address = input("Enter your address: ")
+        list_of_voters.append(address)
+        print("==============================================")
+        print("Are you voting for Democratic Presidential Election? ")
+        democrat = input("\tVote(yes/no): ")
+        print("Are you voting for Republican for Presidential Election? ")
+        republican = input("\tVote(yes/no): ")
+        print("Are you voting for Democratic US Senate? ")
+        dsenate = input("\tVote(yes/no): ")
+        print("Are you voting for Republican US Senate? ")
+        rsenate = input("\tVote(yes/no): ")
+        print("Are you voting for Democratic House of Representatives? ")
+        dhouse = input("\tVote(yes/no): ")
+        print("Are you voting for Republican House of Representatives? ")
+        rhouse = input("\tVote(yes/no): ")
+        print("Are you voting for Democratic Governorship? ")
+        dgovernor = input("\tVote(yes/no): ")
+        print("Are you voting for Republican Governorship? ")
+        rgovernor = input("\tVote(yes/no): ")
+        print("Are you voting for Green Party? ")
+        green = input("\tVote(yes/no): ")
+        print()
+        print("\t================")
+        print("\tGeneral Election")
+        print("\t================")
+        print("==============================================")
+        if democrat == "yes":
+            list_of_democrat.append(democrat)
+        if republican == "yes":
+            list_of_republican.append(republican)
+        if dsenate == "yes":
+            list_of_democrat_senate.append(dsenate)
+        if rsenate == "yes":
+            list_of_republican_senate.append(rsenate)
+        if dhouse == "yes":
+            list_of_democrat_house.append(dhouse)
+        if rhouse == "yes":
+            list_of_republican_house.append(rhouse)
+        if dgovernor == "yes":
+            list_of_democrat_governor.append(dgovernor)
+        if rgovernor == "yes":
+            list_of_republican_governor.append(rgovernor)
+        if green == "yes":
+            list_of_green.append(green)
+        print("Democratic President","=",len(list_of_democrat))
+        print("Republican President","=",len(list_of_republican))
+        print("==============================================")
+        print("Democratic Senate","=",len(list_of_democrat_senate))
+        print("Republican Senate","=",len(list_of_republican_senate))
+        print("==============================================")
+        print("Democratic House","=",len(list_of_democrat_house))
+        print("Republican House","=",len(list_of_republican_house))
+        print("==============================================")
+        print("Democratic Governor","=",len(list_of_democrat_governor))
+        print("Republican Governor","=",len(list_of_republican_governor))
+        print("==============================================")
+        print("Green Party","=",len(list_of_green))
+        print("==============================================")
+        print()
+        if list_of_democrat > list_of_republican and list_of_democrat == list_of_democrat_senate and list_of_democrat == list_of_democrat_house and list_of_democrat == list_of_democrat_governor:
+            print("\t=============")
+            print("\tDemocrat Wins")
+            print("\t=============")
+            print()
+        elif list_of_republican > list_of_democrat and list_of_republican == list_of_republican_senate and list_of_republican == list_of_republican_house and list_of_republican == list_of_republican_governor:
+            print("\t===============")
+            print("\tRepublican Wins")
+            print("\t===============")
+            print()
+        else:
+            print("\t================")
+            print("\tAwaiting Results")
+            print("\t================")
+            print()
+
+    else:
+        print("================")
+        print("You Can Not Vote")
+        print("================")
+    
+        
